@@ -35,15 +35,11 @@ function css() {
   return gulp
     .src([
       './node_modules/normalize.css/normalize.css',
-      './node_modules/slick-carousel/slick/slick.css',
-      './node_modules/slick-carousel/slick/slick-theme.css',
-      './node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
-      './node_modules/owl.carousel/dist/assets/owl.theme.default.min.css',
-      './app/src/css/*.css'
+      './app/src/scss/*.scss'
     ])
-    .pipe(concat('style.css'))
+    .pipe(concat('style.min.css'))
     .pipe(postcss([atImport(), autoprefixer(), precss(), cssnano(), lost()]))
-    .pipe(gulp.dest('./app/min/css'))
+    .pipe(gulp.dest('./app/dist/css'))
     .pipe(browsersync.stream());
 }
 
@@ -51,17 +47,17 @@ function css() {
 function scripts() {
   return (
     gulp.src([
-      './app/src/js/modernizr-2.8.3-respond-1.4.2.min.js',
+      './app/src/js/modernizr-3.11.2.js',
       './app/src/js/main.js'
     ])
-      .pipe(concat('script.js'))
+      .pipe(concat('script.min.js'))
       .pipe(uglify())
-      .pipe(gulp.dest('app/min/js'))
+      .pipe(gulp.dest('app/dist/js'))
       .pipe(browsersync.stream()));
 }
 
 function watchFiles() {
-  gulp.watch('./app/src/css/*.css', css);
+  gulp.watch('./app/src/scss/*.scss', css);
 
   gulp.watch([
     './app/src/js/*.js',

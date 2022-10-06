@@ -29,6 +29,8 @@
     "precss": "^4.0.0",
     "slick-carousel": "^1.8.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "postcss-preset-env": "^7.8.2"
+  },
   "description": ""
 }
