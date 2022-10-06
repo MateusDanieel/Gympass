@@ -141,3 +141,47 @@
     font-weight: 900;
     font-style: normal;
 }
+
+/* Sharp Sans */
+
+@font-face {
+    font-family: 'Sharp Sans';
+    src: url('../../fonts/Sharp Sans/SharpSans-Medium.ttf') format('truetype'), url('../../fonts/Sharp Sans/SharpSans-Medium.otf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sharp Sans';
+    src: url('../../fonts/Sharp Sans/SharpSans-MediumItalic.ttf') format('truetype'), url('../../fonts/Sharp Sans/SharpSans-MediumItalic.otf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sharp Sans';
+    src: url('../../fonts/Sharp Sans/SharpSans-Extrabold.ttf') format('truetype'), url('../../fonts/Sharp Sans/SharpSans-Extrabold.otf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sharp Sans';
+    src: url('../../fonts/Sharp Sans/SharpSans-ExtraboldItalic.ttf') format('truetype'), url('../../fonts/Sharp Sans/SharpSans-ExtraboldItalic.otf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Sharp Sans';
+    src: url('../../fonts/Sharp Sans/SharpSans-Bold.ttf') format('truetype'), url('../../fonts/Sharp Sans/SharpSans-Bold.otf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sharp Sans';
+    src: url('../../fonts/Sharp Sans/SharpSans-BoldItalic.ttf') format('truetype'), url('../../fonts/Sharp Sans/SharpSans-BoldItalic.otf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
