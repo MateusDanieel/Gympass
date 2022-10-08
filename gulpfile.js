@@ -35,6 +35,7 @@ function css() {
   return gulp
     .src([
       './node_modules/normalize.css/normalize.css',
+      './node_modules/fullpage.js/dist/fullpage.css',
       './app/src/scss/*.scss'
     ])
     .pipe(concat('style.min.css'))
@@ -48,6 +49,7 @@ function scripts() {
   return (
     gulp.src([
       './app/src/js/modernizr-3.11.2.js',
+      //'./node_modules/fullpage.js/dist/fullpage.js',
       './app/src/js/main.js'
     ])
       .pipe(concat('script.min.js'))
