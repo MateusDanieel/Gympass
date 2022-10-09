@@ -141,8 +141,45 @@ aside.menu {
 }
 
 header.sec-header {
+    background: url('../../img/bg-header-mobile.png') center top no-repeat;
+    background-size: cover;
     height: 100vh;
-    padding: 0 32px;
+    padding: 71.59px 0 0;
+    overflow: hidden;
+
+    @media (--tabSm) {
+        background: url('../../img/bg-header.png') center top no-repeat;
+        background-size: contain;
+    }
+
+    @media (--desk) {
+        background-size: cover;
+        padding: 0;
+    }
+
+    .dest-glove {
+        display: none;
+        max-width: 310px;
+        
+        @media (--deskWide) {
+            display: block;
+            margin: 0 auto;
+        }
+
+        &.mobile {
+            display: block;
+            margin: 0 auto -60px;
+            max-width: none;
+
+            @media (--desk) {
+                margin: -20px auto -60px;
+            }
+
+            @media (--deskWide) {
+                display: none;
+            }
+        }
+    }
 
     .title {
         color: #231B22;
@@ -150,9 +187,59 @@ header.sec-header {
         font-family: 'Nysé';
         font-size: 39px;
         text-align: center;
+        position: relative;
+        
 
         @media (--tabSm) {
+            font-size: 48px;
+        }
+
+        @media (--tab) {
+            font-size: 62px;
+        }
+
+        @media (--desk) {
+            font-size: 78px;
+            margin: -70px 0 0;
+        }
+
+        @media (--deskWide) {
+            margin: -70px 0 0;
             font-size: 84px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 400px;
+            background: url('../../img/dest-header-wellness-mobile.png') center top no-repeat;
+            background-size: cover;
+            z-index: -1;
+
+            @media (--tabSm) {
+                background: url('../../img/dest-header-wellness.png') center top no-repeat;
+                background-size: contain;
+                height: 800px;
+                top: -100px;
+            }
+
+            @media (--tab) {
+                height: 1000px;
+                top: -150px;
+            }
+
+            @media (--desk) {
+                top: -200px;
+                height: 1250px;
+            }
+
+            @media (--deskWide) {
+                background-size: cover;
+                top: -325px;
+            }
         }
     }
 
@@ -161,37 +248,64 @@ header.sec-header {
         font-family: 'Sharp Sans';
         font-weight: 500;
         font-size: 16px;
+        line-height: 1.5;
         max-width: 668px;
         text-align: center;
-        margin: 0 auto;
+        margin: 160px auto 0;
+        padding: 0 32px;
 
         @media (--tabSm) {
             font-size: 18px;
+            padding: 0;
+            margin: 300px auto 0;
+        }
+
+        @media (--tab) {
+            margin: 380px auto 0;
+        }
+
+        @media (--desk) {
+            margin: 300px auto 0;
+        }
+
+        @media (--deskWide) {
+            margin: 460px auto 0;
         }
     }
 
-    .bt {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Sharp Sans';
-        line-height: 3.0;
-        font-weight: 700;
-        font-size: 16px;
-        color: #231B22;
-        border: 2px solid #231B22;
-        border-radius: 93px;
-        text-transform: uppercase;
-        width: 100%;
-        max-width: 462px;
-        padding: 0;
-        margin: 32px auto 0;
+    .bt-wrap {
+        padding: 0 32px;
 
-        @media (--tabSm) {
-            margin: 60px auto 0;
-            
-            font-size: 21px;
-            border: 3px solid #231B22;
+        .bt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Sharp Sans';
+            line-height: 3.0;
+            font-weight: 700;
+            font-size: 16px;
+            color: #231B22;
+            border: 2px solid #231B22;
+            border-radius: 93px;
+            text-transform: uppercase;
+            width: 100%;
+            max-width: 462px;
+            padding: 0;
+            margin: 32px auto 0;
+    
+            @media (--tabSm) {
+                margin: 60px auto 0;
+                font-size: 21px;
+                border: 3px solid #231B22;
+            }
+
+            @media (--desk) {
+                margin: 30px auto 0;
+            }
+
+            @media (--deskWide) {
+                margin: 60px auto 0;
+            }
         }
     }
 
@@ -218,6 +332,7 @@ img.ico-scroll {
     left: 40px;
     bottom: 56px;
     visibility: hidden;
+    z-index: 100;
 
     @media (--tabSm) {
         visibility: visible;
@@ -229,6 +344,7 @@ img.ico-lbm {
     right: 40px;
     bottom: 56px;
     visibility: hidden;
+    z-index: 100;
 
     @media (--tabSm) {
         visibility: visible;
