@@ -145,14 +145,16 @@ header.sec-header {
     background-size: cover;
     height: 100vh;
     padding: 71.59px 0 0;
+    overflow: hidden;
 
-    @media (--desk) {
-        padding: 0;
+    @media (--tabSm) {
+        background: url('../../img/bg-header.png') center top no-repeat;
+        background-size: contain;
     }
 
     @media (--desk) {
-        background: url('../../img/bg-header.png') center top no-repeat;
         background-size: cover;
+        padding: 0;
     }
 
     .dest-glove {
@@ -189,7 +191,11 @@ header.sec-header {
         
 
         @media (--tabSm) {
-            font-size: 84px;
+            font-size: 48px;
+        }
+
+        @media (--tab) {
+            font-size: 62px;
         }
 
         @media (--desk) {
@@ -214,16 +220,18 @@ header.sec-header {
             z-index: -1;
 
             @media (--tabSm) {
+                background: url('../../img/dest-header-wellness.png') center top no-repeat;
+                background-size: contain;
                 height: 800px;
+                top: -100px;
             }
 
             @media (--tab) {
                 height: 1000px;
+                top: -150px;
             }
 
             @media (--desk) {
-                background: url('../../img/dest-header-wellness.png') center top no-repeat;
-                background-size: contain;
                 top: -200px;
                 height: 1250px;
             }
@@ -249,11 +257,11 @@ header.sec-header {
         @media (--tabSm) {
             font-size: 18px;
             padding: 0;
-            margin: 360px auto 0;
+            margin: 300px auto 0;
         }
 
         @media (--tab) {
-            margin: 460px auto 0;
+            margin: 380px auto 0;
         }
 
         @media (--desk) {
