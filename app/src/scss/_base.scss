@@ -30,7 +30,7 @@ body {
     margin: 0 auto;
     padding: 0 32px;
 
-    @media (--tab) {
+    @media (--desk) {
         padding: 0;
     }
 }
@@ -45,4 +45,20 @@ a {
 
 img {
     max-width: 100%;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
