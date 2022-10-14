@@ -154,7 +154,7 @@ aside.menu {
 header.sec-header {
     background: url('../../img/bg-header-mobile.png') center top no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
 
     @media (--tabSm) {
@@ -554,7 +554,7 @@ section.sec-work-life {
 section.sec-employees {
     background: url('../../img/bg-sec-employees-mobile.png') center bottom no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     padding: 124px 0 0;
 
     @media (--tabSm) {
@@ -726,6 +726,95 @@ section.sec-employees {
                 }
             }
         }
+    }
+}
+
+section.sec-looking {
+    min-height: 100vh;
+    padding: 141px 0 0;
+
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+
+        .esq {
+            @media (--desk) {
+                max-width: 666px;
+            }
+
+            .title {
+                font-family: 'Nysé';
+                font-weight: 700;
+                line-height: 1;
+                font-size: 56px;
+                color: #231B22;
+
+                @media (--tabSm) {
+                    font-size: 100px;
+                }
+            }
+
+            .intro {
+                font-family: 'Sharp Sans';
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.5;
+                color: #231B22;
+                margin: 32px 0 0;
+
+                @media (--tabSm) {
+                    font-size: 18px;
+                    margin: 40px 0 0;
+                }
+
+                @media (--desk) {
+                    max-width: 583px;
+                }
+
+                b {
+                    font-weight: 700;
+
+                    @media (--desk) {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+        .dir {
+            max-width: 448px;
+            display: none;
+            align-items: center;
+
+            @media (--desk) {
+                display: flex;
+            }
+
+            img {
+                width: 166px;
+                height: 166px;
+                border: 3px solid #231B22;
+                border-radius: 26px;
+                padding: 0 10px;
+                margin: 0 56px 0 0;
+            }
+
+            h3 {
+                font-family: 'Nysé';
+                font-weight: 700;
+                font-size: 60px;
+                color: #231B22;
+                
+                small {
+                    font-family: 'Sharp Sans';
+                    line-height: 1.6;
+                    font-size: 21px;
+                    display: block;
+                }
+            }
+        }
+
+
     }
 }
 
