@@ -531,6 +531,177 @@ section.sec-work-life {
     }
 }
 
+section.sec-employees {
+    height: 100vh;
+    padding: 124px 0 0;
+
+    @media (--tabSm) {
+        padding: 157px 0 0;
+    }
+
+    .content {
+        width: 100%;
+        position: relative;
+
+        @media (--tabSm) {
+            border: 3px solid #231B22;
+            border-radius: 116px;
+            padding: 88px;
+        }
+
+        .copy {
+            font-family: 'Sharp Sans';
+            font-weight: 700;
+            font-size: 16px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -12px;
+            left: 0;
+            right: 0;
+            background: url('../../img/bg.jpg') center top no-repeat;
+            background-size: cover;
+            max-width: 252px;
+            margin: 0 auto;
+            color: #231B22;
+
+            @media (--tabSm) {
+                display: flex;
+            }
+
+            img {
+                margin: 0 0 0 5px;
+                max-width: 105px;
+            }
+        }
+
+        .title {
+            font-family: 'Nysé';
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 1;
+            text-align: left;
+            margin: 0 0 24px;
+            color: #231B22;
+
+            @media (--tabSm) {
+                font-size: 96px;
+                text-align: center;
+                line-height: .95;
+                margin: 0 0 65px;
+            }
+        }
+
+        .intro {
+            font-family: 'Sharp Sans';
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.4;
+            text-align: left;
+            display: block;
+            color: #231B22;
+
+            @media (--tabSm) {
+                font-size: 18px;
+                line-height: 1.5;
+                text-align: center;
+                max-width: 663px;
+                margin: 0 auto;
+            }
+        }
+
+        .lst {
+            display: flex;
+            flex-direction: column;
+            margin: 32px 0 0;
+
+            @media (--tabSm) {
+                margin: 86px 0 0;
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-end;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #D7D7E0;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+
+                @media (--tabSm) {
+                    display: block;
+                    margin: 0 40px;
+                    border-bottom: 0;
+
+                    &:first-child {
+                        margin: 0 40px 0 0;
+                    }
+
+                    &:last-child {
+                        margin: 0 0 0 40px;
+                    }
+                }
+
+                h3 {
+                    font-family: 'Nysé';
+                    font-size: 32px;
+                    font-weight: 700;
+                    text-align: left;
+                    color: #231B22;
+                    width: 40px;
+                    margin: 0 24px 0 0;
+
+                    @media (--tabSm) {
+                        font-size: 100px;
+                        width: auto;
+                        text-align: center;
+                        margin: 0;
+                    }
+                }
+
+                img {
+                    margin: 0 auto;
+
+                    &.desktop {
+                        display: none;
+
+                        @media (--tabSm) {
+                            display: block;
+                        }
+                    }
+
+                    &.mobile {
+                        display: block;
+                        margin: 0 24px 0 0;
+
+                        @media (--tabSm) {
+                            display: none;
+                        }
+                    }
+                }
+
+                p {
+                    font-family: 'Sharp Sans';
+                    font-weight: 700;
+                    font-size: 14px;
+                    text-align: center;
+                    color: #231B22;
+                    line-height: 5;
+
+                    @media (--tabSm) {
+                        font-size: 22px;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+}
+
 footer.sec-footer {
     padding: 177px 0 0;
 
