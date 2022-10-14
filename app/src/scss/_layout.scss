@@ -22,10 +22,6 @@ nav.navbar {
         font-weight: 700;
         color: #231B22;
 
-        @media (--tab) {
-            display: none;
-        }
-
         img {
             width: 105px;
             margin: 0 8px 0 0;
@@ -144,133 +140,93 @@ header.sec-header {
     background: url('../../img/bg-header-mobile.png') center top no-repeat;
     background-size: cover;
     height: 100vh;
-    padding: 71.59px 0 0;
     overflow: hidden;
 
     @media (--tabSm) {
         background: url('../../img/bg-header.png') center top no-repeat;
-        background-size: contain;
+        background-size: cover;
     }
 
     @media (--desk) {
-        background-size: cover;
         padding: 0;
     }
 
-    .dest-glove {
-        display: none;
-        max-width: 310px;
-        
-        @media (--deskWide) {
-            display: block;
-            margin: 0 auto;
-        }
-
-        &.mobile {
-            display: block;
-            margin: 0 auto -60px;
-            max-width: none;
-
-            @media (--desk) {
-                margin: -20px auto -60px;
-            }
-
-            @media (--deskWide) {
-                display: none;
-            }
-        }
-    }
-
     .title {
+        font-family: 'Pilat Compressed';
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 90px;
         color: #231B22;
-        font-weight: 700;
-        font-family: 'Nysé';
-        font-size: 39px;
         text-align: center;
+        line-height: 1;
         position: relative;
-        
-
-        @media (--tabSm) {
-            font-size: 48px;
-        }
+        margin: 138px 0 0;
 
         @media (--tab) {
-            font-size: 62px;
-        }
-
-        @media (--desk) {
-            font-size: 78px;
-            margin: -70px 0 0;
+            margin: 72px 0 0;
+            font-size: 246px;
         }
 
         @media (--deskWide) {
-            margin: -70px 0 0;
-            font-size: 84px;
+            margin: 125px 0 0;
+        }
+       
+        span {
+            font-size: 32px;
+            font-weight: 500;
+            display: block;
+
+            @media (--tab) {
+                font-size: 55px;
+            }
         }
 
         &::before {
             content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 400px;
+            height: 217.5px;
+            position: absolute;
             background: url('../../img/dest-header-wellness-mobile.png') center top no-repeat;
-            background-size: cover;
-            z-index: -1;
-
-            @media (--tabSm) {
-                background: url('../../img/dest-header-wellness.png') center top no-repeat;
-                background-size: contain;
-                height: 800px;
-                top: -100px;
-            }
+            background-size: contain;
+            left: 0;
+            top: 55px;
 
             @media (--tab) {
-                height: 1000px;
-                top: -150px;
-            }
-
-            @media (--desk) {
-                top: -200px;
-                height: 1250px;
-            }
-
-            @media (--deskWide) {
-                background-size: cover;
-                top: -325px;
+                //width: 1149.5px;
+                background: url('../../img/dest-header-wellness.png') center top no-repeat;
+                background-size: contain;
+                height: 533.5px;
+                top: 125px;
             }
         }
+
     }
 
     .intro {
-        color: #231B22;
+        color: #000;
         font-family: 'Sharp Sans';
-        font-weight: 500;
+        font-weight: 700;
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.4;
         max-width: 668px;
         text-align: center;
-        margin: 160px auto 0;
+        margin: 183px auto 0;
         padding: 0 32px;
 
         @media (--tabSm) {
-            font-size: 18px;
+            //margin: 300px auto 0;
             padding: 0;
-            margin: 300px auto 0;
+            font-size: 18px;
         }
 
         @media (--tab) {
-            margin: 380px auto 0;
-        }
-
-        @media (--desk) {
-            margin: 300px auto 0;
+            margin: 225px auto 0;
         }
 
         @media (--deskWide) {
-            margin: 460px auto 0;
+            margin: 260px auto 0;
         }
+
     }
 
     .bt-wrap {
@@ -285,7 +241,7 @@ header.sec-header {
             font-weight: 700;
             font-size: 16px;
             color: #231B22;
-            border: 2px solid #231B22;
+            border: 2px solid #000;
             border-radius: 93px;
             text-transform: uppercase;
             width: 100%;
@@ -296,7 +252,7 @@ header.sec-header {
             @media (--tabSm) {
                 margin: 60px auto 0;
                 font-size: 21px;
-                border: 3px solid #231B22;
+                border: 3px solid #000;
             }
 
             @media (--desk) {
@@ -318,7 +274,7 @@ header.sec-header {
         margin: 40px auto 0;
         text-align: center;
         
-        @media (--tabSm) {
+        @media (--tab) {
             visibility: hidden;
         }
     }
@@ -331,7 +287,19 @@ section.sec-work-life {
     background: url('../../img/bg-sec-work-life.png') center bottom no-repeat;
     background-size: cover;
     padding: 128px 0 0;
-    height: 100vh;
+    min-height: 100vh;
+
+    .container {
+        padding: 0;
+    }
+
+    @media (--desk) {
+        padding: 58px 0 0;
+    }
+
+    @media (--deskWide) {
+        padding: 116px 0 0;
+    }
 
     .title {
         font-family: 'Nysé';
@@ -353,14 +321,15 @@ section.sec-work-life {
             strong {
                 font-weight: 700;
                 padding: 10px 0;
-                background-color: #231B22;
-                border: 4px solid #FF874C;
+                background-color: #710252;
+                border: 4px solid #FFB0A7;
                 color: #F5F5FA;
                 border-radius: 102px;
                 display: block;
                 max-width: 228px;
                 margin: 0 auto;
                 transform: translateX(30px);
+                color: #FFB0A7;
 
                 @media (--tab) {
                     padding: 30px 70px;
@@ -410,9 +379,9 @@ section.sec-work-life {
             strong {
                 font-weight: 700;
                 padding: 10px 0;
-                background-color: #FF874C;
-                border: 4px solid #000;
-                color: #231B22;
+                background-color: #FFB0A7;
+                border: 4px solid #710252;
+                color: #710252;
                 border-radius: 102px;
                 display: block;
                 margin: 0 auto;
@@ -438,32 +407,125 @@ section.sec-work-life {
     .lst {
         display: flex;
         justify-content: space-between;
-        margin: 84px 0 0;
+        margin: 120px 0 0;
+
+        @media (--desk) {
+            margin: 84px 0 0;
+            min-height: auto;
+        }
 
         li {
-            max-width: 370px;
+            padding: 44px 0 88px;
 
-            h3 {
-                font-family: 'Nysé';
-                line-height: 1.5;
-                font-weight: 700;
-                font-size: 32px;
-                margin: 0 0 30px;
-
-                small {
-                    font-family: 'Sharp Sans';
-                    font-weight: 500;
-                    font-size: 20px;
-                    display: block;
-                }
+            @media (--desk) {
+                padding: 0;
             }
 
-            p {
-                font-family: 'Sharp Sans';
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 1.5;
-                text-align: justify;
+            .item {
+                background-color: #FFF;
+                border: 2px solid #231B22;
+                border-radius: 32px;
+                padding: 0 24px;
+                text-align: center;
+                margin: 0 8px;
+                height: 464px;
+                position: relative;
+
+                @media (--desk) {
+                    background-color: transparent;
+                    max-width: 370px;
+                    border: none;
+                    border-radius: 0;
+                    padding: 0;
+                    text-align: left;
+                    margin: 0;
+                    height: auto;
+                }
+
+                &::before {
+                    content: '';
+                    width: 88px;
+                    height: 88px;
+                    border: 2px solid #231B22;
+                    border-radius: 50%;
+                    background: url('../../img/ico-sec-work-life-slide.svg') center center no-repeat;
+                    background-color: #FF874C;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: -44px;
+                    margin: 0 auto;
+
+                    @media (--desk) {
+                        display: none;
+                    }
+                }
+                
+                h3 {
+                    font-family: 'Nysé';
+                    line-height: 1;
+                    font-weight: 700;
+                    font-size: 32px;
+                    margin: 102px 0 30px;
+
+                    @media (--desk) {
+                        margin: 0 0 30px;
+                        line-height: 1.5;
+                    }
+
+                    small {
+                        font-family: 'Sharp Sans';
+                        font-weight: 500;
+                        font-size: 16px;
+                        display: block;
+                        margin: 0 0 8px;
+
+                        @media (--desk) {
+                            font-size: 20px;
+                            margin: 0;
+                        }
+                    }
+                }
+
+                p {
+                    font-family: 'Sharp Sans';
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 1.4;
+                    text-align: center;
+
+                    @media (--desk) {
+                        line-height: 1.5;
+                    }
+
+                    @media (--desk) {
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+
+        .slick-dots {
+            bottom: -24px;
+
+            li {
+                button {
+                    background-color: #D7D7E0;
+                    border-radius: 50%;
+                    width: 8px;
+                    height: 8px;
+
+                    &::before {
+                        content: '';
+                    }
+                }
+
+                &.slick-active {
+                    button {
+                        background-color: #000;
+                    }
+                }
+                
             }
         }
     }
@@ -676,7 +738,7 @@ footer.sec-footer {
 
 img.ico-scroll {
     position: fixed;
-    left: 40px;
+    left: 15px;
     bottom: 56px;
     visibility: hidden;
     z-index: 100;
@@ -684,16 +746,24 @@ img.ico-scroll {
     @media (--desk) {
         visibility: visible;
     }
+
+    @media (--deskWide) {
+        left: 40px;
+    }
 }
 
 img.ico-lbm {
     position: fixed;
-    right: 40px;
+    right: 15px;
     bottom: 56px;
     visibility: hidden;
     z-index: 100;
 
     @media (--desk) {
         visibility: visible;
+    }
+
+    @media (--deskWide) {
+        right: 40px;
     }
 }

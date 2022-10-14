@@ -12,3 +12,23 @@
         menu.classList.remove('active');
     });
 })();
+
+// SLICK 'sec-work-life'
+(() => {
+
+    if(window.innerWidth <= 1248) {
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: false,
+            dots: true,
+            infinite: false,
+            centerMode: true,
+            centerPadding: '20px',
+            adaptiveHeight: true
+        });
+    }
+
+})();
+ 
