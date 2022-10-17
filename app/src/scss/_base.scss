@@ -19,6 +19,9 @@ body {
     background: url('../../img/bg-mobile.jpg') center top repeat;
     background-size: contain;
 
+    /* HIDE SCROLLBAR */
+    overflow: hidden; 
+
     @media (--tabSm) {
         background: url('../../img/bg.jpg') center top repeat;
         background-size: contain;
