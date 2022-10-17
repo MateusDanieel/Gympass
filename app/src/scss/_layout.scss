@@ -1046,6 +1046,23 @@ section.sec-looking {
 
 }
 
+section.sec-workplace {
+    padding: 125px 0 0;
+    min-height: 100vh;
+
+    .title {
+        font-family: 'Nysé';
+        font-weight: 400;
+        font-size: 100px;
+        line-height: 1;
+        color: #231B22;
+
+        b {
+            font-weight: 700;
+        }
+    }
+}
+
 footer.sec-footer {
     padding: 177px 0 0;
 
