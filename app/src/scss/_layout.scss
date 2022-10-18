@@ -1053,6 +1053,14 @@ section.sec-workplace {
 
     .container {
         padding: 0;
+
+        @media (--tab) {
+            padding: 0 32px;
+        }
+
+        @media (--desk) {
+            padding: 0;
+        }
     }
 
     .title {
@@ -1109,6 +1117,35 @@ section.sec-workplace {
                 flex-direction: row;
             }
 
+            @media (max-width: 768px) {
+                &.active {
+
+                    .content {
+                        p + p {
+                            height: 0;
+                            overflow: hidden;
+                            margin: 0;
+                            transition: 1s;
+                        }
+                    }
+    
+                    .only-mobile {
+                        height: 0;
+                        overflow: hidden;
+                        margin: 0;
+                    }
+    
+                    figure {
+                        figcaption {
+                            &::after {
+                                height: 0;
+                            }
+                        }
+                    }
+    
+                }
+            }
+
             .content {
                 padding: 0 32px;
 
@@ -1126,7 +1163,11 @@ section.sec-workplace {
                     margin: 0 0 40px;
 
                     &:last-child {
-                        margin: 0;
+                        
+                        @media (--tab) {
+                            margin: 0;
+                        }
+                        
                     }
                 }
 
@@ -1137,7 +1178,6 @@ section.sec-workplace {
                 display: flex;
                 align-items: flex-start;
                 justify-content: center;
-                margin: 25px 0 0;
                 
                 @media (--tabSm) {
                     max-width: 311px;
@@ -1223,6 +1263,10 @@ section.sec-workplace {
 
                 @media (--tab) {
                     display: none;
+                }
+
+                .img-mandala {
+                    width: 100%;
                 }
 
                 .desc-mandala {

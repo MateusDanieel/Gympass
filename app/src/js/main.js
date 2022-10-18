@@ -32,3 +32,20 @@
     }
 
 })();
+
+// TOGGLE 'sec-workplace'
+
+(() => {
+    let content = document.querySelector('.sec-workplace .wrap .dir');
+    let bt = document.querySelector('.sec-workplace .wrap .dir .bt .toggle');
+
+    bt.addEventListener('click', () => {
+        if(content.classList == 'dir active') {
+            content.classList.remove('active');
+            bt.innerHTML = 'CLOSE';
+        } else {
+            content.classList.add('active');
+            bt.innerHTML = 'SEE DETAILS';
+        }
+    });
+})();
