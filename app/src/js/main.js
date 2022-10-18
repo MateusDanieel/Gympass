@@ -13,11 +13,11 @@
     });
 })();
 
-// SLICK 'sec-work-life'
+// SLICK CAROUSEL
 (() => {
 
     if(window.innerWidth <= 1248) {
-        $('.slider-for-wl').slick({
+        $('.slider-for').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
@@ -29,18 +29,23 @@
             adaptiveHeight: true
         });
 
-        $('.slider-for-l').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: false,
-            dots: true,
-            infinite: false,
-            centerMode: true,
-            centerPadding: '20px',
-            adaptiveHeight: true
-        });
     }
 
 })();
- 
+
+// TOGGLE 'sec-workplace'
+
+(() => {
+    let content = document.querySelector('.sec-workplace .wrap .dir');
+    let bt = document.querySelector('.sec-workplace .wrap .dir .bt .toggle');
+
+    bt.addEventListener('click', () => {
+        if(content.classList == 'dir active') {
+            content.classList.remove('active');
+            bt.innerHTML = 'CLOSE';
+        } else {
+            content.classList.add('active');
+            bt.innerHTML = 'SEE DETAILS';
+        }
+    });
+})();
