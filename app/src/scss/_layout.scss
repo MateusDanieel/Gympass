@@ -152,18 +152,35 @@ aside.menu {
 }
 
 header.sec-header {
-    background: url('../../img/bg-header-mobile.png') center top no-repeat;
+    background: url('../../img/bg-mobile.png') center top no-repeat;
     background-size: cover;
-    min-height: 100vh;
     overflow: hidden;
+    position: relative;
 
     @media (--tabSm) {
-        background: url('../../img/bg-header.png') center top no-repeat;
+        background: url('../../img/bg.jpg') center top no-repeat;
         background-size: cover;
     }
 
     @media (--desk) {
         padding: 0;
+    }
+
+    &::before {
+        content: '';
+        background: url('../../img/bg-header-mobile.png') center top no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+    
+        @media (--tabSm) {
+            background: url('../../img/bg-header.png') center top no-repeat;
+            background-size: cover;
+        }
     }
 
     .title {
@@ -1316,14 +1333,40 @@ section.sec-more {
         margin: 0;
         line-height: .9;
         text-align: center;
-
-        .gif {
-            visibility: hidden;
-        }
+        position: relative;
 
         @media (--tabSm) {
             font-size: 277px;
         }
+
+        img {
+            position: absolute;
+            left: 35px;
+            top: -60px;
+            width: 200px;
+
+            @media (--tabSm) {
+                top: -140px;
+                left: 74px;
+                width: 460px;
+            }
+
+            @media (--tab) {
+                left: 202px;
+            }
+
+            @media (--desk) {
+                left: 317px;
+                top: -140px;
+            }
+        }
+
+        img + span {
+            visibility: hidden;
+        }
+
+
+        
     }
 }
 

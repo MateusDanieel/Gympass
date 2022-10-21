@@ -48,4 +48,10 @@
             bt.innerHTML = 'SEE DETAILS';
         }
     });
-})();
+})(); 
+
+// START 'pagepiling.js'
+
+$(document).ready(function() {
+	$('#pagepiling').pagepiling();
+});
