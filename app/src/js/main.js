@@ -34,7 +34,6 @@
 })();
 
 // TOGGLE 'sec-workplace'
-
 (() => {
     let content = document.querySelector('.sec-workplace .wrap .dir');
     let bt = document.querySelector('.sec-workplace .wrap .dir .bt .toggle');
@@ -48,10 +47,18 @@
             bt.innerHTML = 'SEE DETAILS';
         }
     });
-})(); 
-
-// START 'pagepiling.js'
-
-$(document).ready(function() {
-	$('#pagepiling').pagepiling();
+})();
+ 
+// START 'fullpage.js'
+new fullpage('#fullpage', {
+    licenseKey: '',
+    autoScrolling:true,
+    scrollHorizontally: true,
+    fadingEffect: true,
+    credits: { enabled: false },
+    scrollOverflow: false,
+    scrollBar:true 
 });
+
+// Start 'AOS'
+AOS.init(); 
