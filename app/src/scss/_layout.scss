@@ -14,6 +14,23 @@ nav.navbar {
         padding: 30px 40px;
     }
 
+    
+    &.active {
+        .bt {
+            @media (--tabSm) {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .brand {
+            span {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
     .brand {
         display: flex;
         align-items: flex-end;
@@ -35,6 +52,12 @@ nav.navbar {
                 margin: 0 16px 0 0;
             }
         }
+
+        span {
+            visibility: hidden;
+            opacity: 0;
+            transition: 1s;
+        }
     }
 
     .bt {
@@ -49,9 +72,12 @@ nav.navbar {
         padding: 0 22px;
         line-height: 2.5;
         display: none;
-
+        transition: 1s;
+        
         @media (--tabSm) {
             display: inline-block;
+            visibility: hidden;
+            opacity: 0;
         }
     }
 
@@ -337,7 +363,7 @@ section.sec-work-life {
         z-index: -1;
     
         @media (--tabSm) {
-            background: url('../../img/bg-sec-work-life.png') center bottom no-repeat;
+            background: url('../../img/bg-sec-work-life.png') center top no-repeat;
             background-size: cover;
         }
     }
@@ -1085,7 +1111,7 @@ section.sec-looking {
 }
 
 section.sec-workplace {
-    //padding: 125px 0;
+    padding: 2.5% 0 0;
     position: relative;
 
     .container {

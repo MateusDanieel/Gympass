@@ -1,0 +1,18 @@
+@keyframes conic {
+    0% {
+        background: conic-gradient(#D8385E 0%, transparent 0%);
+        transition: all 0.1s ease-out;
+    }
+
+    50% {
+        background: conic-gradient(#D8385E 50%, transparent 50%);
+        transition: all 0.1s ease-out;
+    }
+
+    100% {
+        background: conic-gradient(#D8385E 85%, transparent 85%);
+        transition: all 0.1s ease-out;
+    }
+
+    
+}
