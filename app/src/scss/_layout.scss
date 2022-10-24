@@ -11,7 +11,7 @@ nav.navbar {
     z-index: 100;
 
     @media (--tabSm) {
-        padding: 55px 40px;
+        padding: 30px 40px;
     }
 
     .brand {
@@ -152,15 +152,8 @@ aside.menu {
 }
 
 header.sec-header {
-    background: url('../../img/bg-mobile.png') center top no-repeat;
-    background-size: cover;
     overflow: hidden;
     position: relative;
-
-    @media (--tabSm) {
-        background: url('../../img/bg.jpg') center top no-repeat;
-        background-size: cover;
-    }
 
     @media (--desk) {
         padding: 0;
@@ -176,6 +169,7 @@ header.sec-header {
         position: absolute;
         left: 0;
         top: 0;
+        z-index: -1;
     
         @media (--tabSm) {
             background: url('../../img/bg-header.png') center top no-repeat;
@@ -222,6 +216,7 @@ header.sec-header {
             background-size: contain;
             left: 0;
             top: 55px;
+            z-index: 2;
 
             @media (--tab) {
                 //width: 1149.5px;
@@ -280,6 +275,7 @@ header.sec-header {
             max-width: 462px;
             padding: 0;
             margin: 32px auto 0;
+            z-index: 100;
     
             @media (--tabSm) {
                 margin: 60px auto 0;
@@ -316,26 +312,38 @@ header.sec-header {
 }
 
 section.sec-work-life {
-    background: url('../../img/bg-sec-work-life-mobile.png') center bottom no-repeat;
-    background-size: cover;
-    padding: 128px 0 0;
-    min-height: 100vh;
+    //padding: 128px 0 0;
+    //min-height: 100vh;
+    position: relative;
 
-    @media (--tabSm) {
-        background: url('../../img/bg-sec-work-life.png') center bottom no-repeat;
+    @media (--desk) {
+        //padding: 58px 0 0;
+    }
+
+    @media (--deskWide) {
+        //padding: 116px 0 0;
+    }
+
+    &::before {
+        content: '';
+        background: url('../../img/bg-sec-work-life-mobile.png') center bottom no-repeat;
         background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    
+        @media (--tabSm) {
+            background: url('../../img/bg-sec-work-life.png') center bottom no-repeat;
+            background-size: cover;
+        }
     }
 
     .container {
         padding: 0;
-    }
-
-    @media (--desk) {
-        padding: 58px 0 0;
-    }
-
-    @media (--deskWide) {
-        padding: 116px 0 0;
     }
 
     .title {
@@ -569,18 +577,30 @@ section.sec-work-life {
 }
 
 section.sec-employees {
-    background: url('../../img/bg-sec-employees-mobile.png') center bottom no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    padding: 124px 0 0;
+    position: relative;
+    //min-height: 100vh;
+    //padding: 124px 0 0;
 
     @media (--tabSm) {
-        background: url('../../img/bg-sec-employees.png') center bottom no-repeat;
-        background-size: cover;
+        //padding: 141px 0 0;
     }
 
-    @media (--tabSm) {
-        padding: 141px 0 0;
+    &::before {
+        content: '';
+        background: url('../../img/bg-sec-employees-mobile.png') center bottom no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    
+        @media (--tabSm) {
+            background: url('../../img/bg-sec-employees.png') center bottom no-repeat;
+            background-size: cover;
+        }
     }
 
     .content {
@@ -604,7 +624,7 @@ section.sec-employees {
             top: -12px;
             left: 0;
             right: 0;
-            background: url('../../img/bg.jpg') center top no-repeat;
+            background: #F5F5FA url('../../img/bg.png') center top no-repeat;
             background-size: cover;
             max-width: 252px;
             margin: 0 auto;
@@ -747,8 +767,9 @@ section.sec-employees {
 }
 
 section.sec-looking {
-    min-height: 100vh;
-    padding: 141px 0 0;
+    //min-height: 100vh;
+    //padding: 141px 0 0;
+    padding: 5% 0 0;
 
     .container {
         padding: 0;
@@ -932,7 +953,7 @@ section.sec-looking {
                         justify-content: flex-start;
                         height: 335px;
                         width: 335px;
-                        background: url('../../img/bg.jpg') center center repeat;
+                        background: #F5F5FA url('../../img/bg.png') center center repeat;
                         background-size: contain;
                     }
 
@@ -1064,12 +1085,12 @@ section.sec-looking {
 }
 
 section.sec-workplace {
-    padding: 125px 0;
-    min-height: 100vh;
+    //padding: 125px 0;
     position: relative;
 
     .container {
         padding: 0;
+        
 
         @media (--tab) {
             padding: 0 32px;
@@ -1324,6 +1345,8 @@ section.sec-workplace {
 }
 
 section.sec-more {
+    overflow: hidden;
+
     h1 {
         font-family: 'Nysé';
         font-weight: 700;
@@ -1371,10 +1394,10 @@ section.sec-more {
 }
 
 footer.sec-footer {
-    padding: 177px 0 0;
+    //padding: 177px 0 0;
 
     @media (--tabSm) {
-        height: 100vh;
+        //height: 100vh;
     }
 
     .container {
@@ -1384,7 +1407,7 @@ footer.sec-footer {
 
         .esq, .dir {
             width: 100%;
-            min-height: 100vh;
+            //min-height: 100vh;
 
             @media (--tabSm) {
                 max-width: 462px; 
@@ -1557,7 +1580,7 @@ footer.sec-footer {
     }
 
     .copyright {
-        padding: 60px 0;
+        padding: 60px 0 0;
         display: flex;
         justify-content: center;
         align-items: center;

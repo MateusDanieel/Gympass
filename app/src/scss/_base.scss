@@ -12,17 +12,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    //scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
  
-body {
-    background: url('../../img/bg-mobile.jpg') center top repeat;
+html {
+    background: #F5F5FA url('../../img/bg-mobile.png') center top repeat;
     background-size: contain;
 
     @media (--tabSm) {
-        background: url('../../img/bg.jpg') center top repeat;
+        background: #F5F5FA url('../../img/bg.png') center top repeat;
         background-size: contain;
-    }
+    } 
 }
 
 .container {
@@ -39,7 +43,7 @@ body {
 a {
     text-decoration: none;
 }
-
+ 
 img {
     max-width: 100%;
 }
