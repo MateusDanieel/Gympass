@@ -32,8 +32,9 @@
     }
 
 })();
-
-// TOGGLE 'sec-workplace'
+ 
+// TOGGLE 'sec-workplace' 
+/*
 (() => {
     let content = document.querySelector('.sec-workplace .wrap .dir');
     let bt = document.querySelector('.sec-workplace .wrap .dir .bt .toggle');
@@ -48,7 +49,7 @@
         }
     });
 })();
-
+*/
 // ANIMATIONS
 (() => {
     const body = document.querySelector('body');
