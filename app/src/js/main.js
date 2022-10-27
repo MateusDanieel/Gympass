@@ -84,6 +84,7 @@
     }
 
     window.addEventListener('scroll', () => {
+
         if(body.className == 'fp-scrollable fp-viewing-sec-four') {
             setTimeout(() => {
                 counterAnima();
@@ -124,23 +125,22 @@ if(window.innerWidth >= 1248) {
         credits: { enabled: false },
         scrollOverflow: false,
         scrollBar:true,
-        anchors:['sec-one', 'sec-two', 'sec-three', 'sec-four', 'sec-five']
+        anchors:['sec-one', 'sec-two', 'sec-three', 'sec-four', 'sec-five'],
+        //paddingTop: '109px',
     });
-} else {
-    //if (event.cancelable) {event.preventDefault();}
+} else { 
 
     new fullpage('#fullpage', {
         licenseKey: '',
         autoScrolling:true,
         scrollHorizontally: true,
-        fadingEffect: true,
         credits: { enabled: false },
         scrollOverflow: true,
         scrollBar:true,
         anchors:['sec-one', 'sec-two', 'sec-three', 'sec-four', 'sec-five'],
+        paddingTop: '71.59px'
     });
 }
 
-
 // Start 'AOS'
-AOS.init();
+AOS.init(); 

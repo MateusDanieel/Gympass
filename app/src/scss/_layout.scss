@@ -1,5 +1,5 @@
 nav.navbar {
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
@@ -218,20 +218,20 @@ header.sec-header {
         text-align: center;
         line-height: 1;
         position: relative;
-        margin: 138px 0 0;
+        //margin: 138px 0 0;
 
         @media (--tab) {
-            margin: 72px 0 0;
+            //margin: 72px 0 0;
             font-size: 246px;
         }
 
         @media (--desk) {
-            margin: 40px 0 0;
+            //margin: 40px 0 0;
             font-size: 165px;
         }
 
         @media (--deskWide) {
-            margin: 125px 0 0;
+            //margin: 125px 0 0;
             font-size: 246px;
         }
        
@@ -422,7 +422,7 @@ section.sec-work-life {
         @media (--desk) {
             text-align: center;
             font-size: 80px;
-            margin: 60px 0 0;
+            //margin: 60px 0 0;
         }
 
         @media (--deskWide) {
@@ -540,7 +540,7 @@ section.sec-work-life {
     .lst {
         display: flex;
         justify-content: space-between;
-        margin: 120px 0 0;
+        margin: 50px 0 0;
 
         @media (--desk) {
             margin: 50px 0 0;
@@ -1648,7 +1648,7 @@ footer.sec-footer {
                             font-weight: 700;
                             font-size: 56px;
                             line-height: 1;
-                            margin: 0 0 24px;
+                            margin: 48px 0 24px;
 
                             &::after {
                                 content: '';
