@@ -43,22 +43,22 @@
         </div>
         
         <ul class="lst">
-            <li>
+            <li data-menuanchor="sec-two">
                 <a href="#WorkLife">
                     <span>01</span>
                     What is work-life wellness?
                 </a>
             </li>
 
-            <li>
+            <li data-menuanchor="sec-three">
                 <a href="#Employees">
                     <span>02</span>
                     About and methodology
                 </a>
             </li>
 
-            <li>
-                <a href="#Looking">
+            <li data-menuanchor="sec-four">
+                <a href="#sec-four">
                     <span>03</span>
                     Employers under pressure
                 </a>
@@ -71,10 +71,10 @@
                 </a>
             </li>
 -->
-            <li>
+            <li data-menuanchor="sec-five">
                 <a href="#GetFullReport">
                     <span>04</span>
-                    Gympass CEO statement
+                    Learn more
                 </a>
             </li>
         </ul>
@@ -82,7 +82,7 @@
 
     <main id="fullpage">
 
-        <header class="section active sec-header" data-aos="fade-zoom-in"
+        <header class="section active sec-header" id="Wellness" data-anchor="sec-one" data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
         data-aos-delay="300"
         data-aos-offset="0">
@@ -115,7 +115,7 @@
 
         </header> 
 
-        <section class="section sec-work-life" id="WorkLife" data-aos="fade-zoom-in"
+        <section class="section sec-work-life" id="WorkLife" data-anchor="sec-two" data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
         data-aos-delay="500"
         data-aos-offset="0">
@@ -141,8 +141,8 @@
                     <li>
                         <div class="item">
                             <h3>
-                                <small>The History of</small>
-                                WORK-LIFE BALANCE
+                                <small>The history of</small>
+                                work-life balance
                             </h3>
         
                             <p>
@@ -154,8 +154,8 @@
                     <li>
                         <div class="item">
                             <h3>
-                                <small>The Emergence of</small>
-                                WORK-LIFE INTEGRATION
+                                <small>The emergence of</small>
+                                work-life integration
                             </h3>
         
                             <p>
@@ -167,8 +167,8 @@
                     <li>
                         <div class="item">
                             <h3>
-                                <small>The Need for</small>
-                                WORK-LIFE WELLNESS
+                                <small>The need for</small>
+                                work-life wellness
                             </h3>
         
                             <p>
@@ -182,7 +182,7 @@
 
         </section>
 
-        <section class="section sec-employees" id="Employees" data-aos="fade-zoom-in"
+        <section class="section sec-employees" id="Employees" data-anchor="sec-three" data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
         data-aos-delay="500"
         data-aos-offset="0">
@@ -223,7 +223,7 @@
                             
                             <img src="img/dest-sec-employees-mobile.png" alt="" class="mobile" />
 
-                            <p>Expert Interviews</p>
+                            <p>Expert interviews</p>
                         </li>
                     </ul>
                 </div>
@@ -232,7 +232,7 @@
 
         </section>
 
-        <section class="section sec-looking" id="Looking">
+        <section class="section sec-looking" data-anchor="sec-four" id="Looking">
             
             <div class="container">
                 <div class="wrap">
@@ -245,7 +245,7 @@
                             We surveyed <b>9,000 employees</b> worldwide about their needs and perceptions regarding corporate wellbeing to uncover invaluable trends for employers everywhere.
                         </p>
                     </div>
-
+<!---
                     <div class="dir"  data-aos="fade-zoom-in"
                     data-aos-easing="ease-in-back"
                     data-aos-delay="500"
@@ -258,6 +258,7 @@
                             <small>employees surveyed</small>
                         </h3>
                     </div>
+-->
                 </div>
 
                 <ul class="slider-for lst">
@@ -439,7 +440,7 @@
             </div>
         </section>
 -->
-        <footer class="section sec-footer" id="GetFullReport">
+        <footer class="section sec-footer" data-anchor="sec-five" id="GetFullReport">
 
             <div class="container">
 
@@ -469,7 +470,7 @@
 
                         <h3 class="intro">
                             <span class="title-mobile">Don’t fall behind</span>
-                            Learn how you can offer your team the right resources to bring balance to their personal and professional lives.
+                            Learn how you can offer <!--your team the right resources to bring balance to their personal and professional lives.-->
                         </h3>
 
                         <div class="wrap">
@@ -478,22 +479,25 @@
                             <input type="text" id="last-name" placeholder="Last Name*" required />
                         </div>
 
-                        <input type="email" id="email" placeholder="E-mail*" required />
+                        <div class="wrap">
+                            <input type="email" id="email" placeholder="E-mail*" required />
 
-                        <input type="tel" id="phone-number" placeholder="Phone Number*" required />
+                            <input type="tel" id="phone-number" placeholder="Phone Number*" required />
+                        </div>
 
+                        
                         <div class="wrap">
                             <input type="text" id="role" placeholder="Role*" required />
 
                             <input type="text" id="department" placeholder="Department*" required />
                         </div>
                         
-                        <input type="text" id="company" placeholder="Company" />
+                        <input type="text" id="company" placeholder="Company*" required />
 
                         <input type="number" id="employees" placeholder="Number of employees in the US*" required />
 
                         <p class="agree">
-                            You agree Gympass may use the information to contact you regarding relevant products and services. Questions? See our Privacy Policy.
+                            You agree Gympass may use the information to contact you regarding relevant products and services. Questions? <a href="#">See our Privacy Policy.</a>
                         </p>
 
                         <button type="submit" class="bt">
@@ -506,9 +510,11 @@
 
             </div>
 
-            <span class="copyright">
-                Powered by <img src="img/logo-gympass.svg" alt="Gympass" />
-            </span>
+            <div class="container">
+                <span class="copyright">
+                    Powered by <img src="img/logo-gympass.svg" alt="Gympass" /><span>Copyright © 2022 Gympass. All Rights Reserved.</span>
+                </span>
+            </div>
 
         </footer>
     </main>

@@ -84,7 +84,7 @@
     }
 
     window.addEventListener('scroll', () => {
-        if(body.className == 'fp-scrollable fp-viewing-3') {
+        if(body.className == 'fp-scrollable fp-viewing-sec-four') {
             setTimeout(() => {
                 counterAnima();
             }, 1750);
@@ -97,27 +97,50 @@
             }, 900); 
         }
 
-        if(body.className != 'fp-scrollable fp-viewing-0') {
+        if(body.className != 'fp-scrollable fp-viewing-sec-one') {
             navbar.classList.add('active');
             
         } else {
             navbar.classList.remove('active');
             
         }
+
+        if(body.className == 'fp-scrollable fp-viewing-sec-five') {
+            navbar.classList.add('disabled');
+        } else {
+            navbar.classList.remove('disabled');
+        }
     });
 
 })();
  
 // START 'fullpage.js'
-new fullpage('#fullpage', {
-    licenseKey: '',
-    autoScrolling:true,
-    scrollHorizontally: true,
-    fadingEffect: true,
-    credits: { enabled: false },
-    scrollOverflow: false,
-    scrollBar:true 
-});
+if(window.innerWidth >= 1248) {
+    new fullpage('#fullpage', {
+        licenseKey: '',
+        autoScrolling:true,
+        scrollHorizontally: true,
+        fadingEffect: true,
+        credits: { enabled: false },
+        scrollOverflow: false,
+        scrollBar:true,
+        anchors:['sec-one', 'sec-two', 'sec-three', 'sec-four', 'sec-five']
+    });
+} else {
+    //if (event.cancelable) {event.preventDefault();}
+
+    new fullpage('#fullpage', {
+        licenseKey: '',
+        autoScrolling:true,
+        scrollHorizontally: true,
+        fadingEffect: true,
+        credits: { enabled: false },
+        scrollOverflow: true,
+        scrollBar:true,
+        anchors:['sec-one', 'sec-two', 'sec-three', 'sec-four', 'sec-five'],
+    });
+}
+
 
 // Start 'AOS'
 AOS.init();
