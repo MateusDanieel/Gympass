@@ -15,10 +15,12 @@
     //scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-    display: none;
+@media (--desk) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
- 
+
 html {
     background: #F5F5FA url('../../img/bg-mobile.png') center top repeat;
     background-size: contain;
