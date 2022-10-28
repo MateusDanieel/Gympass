@@ -33,8 +33,12 @@ nav.navbar {
     }
 
     &.disabled {
-        visibility: hidden;
-        opacity: 0;
+
+        @media (--desk) {
+            visibility: hidden;
+            opacity: 0;
+        }
+        
     }
 
     .brand {
@@ -218,6 +222,7 @@ header.sec-header {
         text-align: center;
         line-height: 1;
         position: relative;
+        margin: 0;
         //margin: 138px 0 0;
 
         @media (--tab) {
@@ -226,12 +231,12 @@ header.sec-header {
         }
 
         @media (--desk) {
-            //margin: 40px 0 0;
+            margin: 40px 0 0;
             font-size: 165px;
         }
 
         @media (--deskWide) {
-            //margin: 125px 0 0;
+            margin: 125px 0 0;
             font-size: 246px;
         }
        
@@ -1784,20 +1789,28 @@ footer.sec-footer {
     
 }
 
-img.ico-scroll {
+img.ico-scroll { 
     position: fixed;
     left: 15px;
     bottom: 56px;
     visibility: hidden;
+    opacity: 0;
     z-index: 100;
+    transition: 1s;
 
     @media (--desk) {
         visibility: visible;
+        opacity: 1;
         left: 20px;
     }
 
     @media (--deskWide) {
         left: 40px;
+    }
+
+    &.disabled {
+        visibility: hidden !important;
+        opacity: 0 !important;
     }
 }
 
