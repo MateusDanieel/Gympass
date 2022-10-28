@@ -15,10 +15,8 @@
     //scroll-behavior: smooth;
 }
 
-@media (--desk) {
-    ::-webkit-scrollbar {
-        display: none;
-    }
+::-webkit-scrollbar {
+    display: none;
 }
 
 html {
