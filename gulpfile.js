@@ -38,7 +38,7 @@ function css() {
       './node_modules/slick-carousel/slick/slick.css',
       './node_modules/slick-carousel/slick/slick-theme.css',
       './node_modules/fullpage.js/dist/fullpage.css',
-      './node_modules/aos/dist/aos.css',
+      //'./node_modules/aos/dist/aos.css',
       './app/src/scss/*.scss'
     ])
     .pipe(concat('style.min.css'))
@@ -55,7 +55,7 @@ function scripts() {
       './node_modules/slick-carousel/slick/slick.min.js',
       './node_modules/fullpage.js/dist/fullpage.js',
       './node_modules/fullpage.js/dist/fullpage.extensions.js',
-      './node_modules/aos/dist/aos.js',
+      //'./node_modules/aos/dist/aos.js',
       './app/src/js/modernizr-3.11.2.js',
       './app/src/js/main.js'
     ])
