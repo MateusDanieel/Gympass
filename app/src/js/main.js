@@ -94,7 +94,7 @@ if(window.innerWidth >= 1248) {
 
     let observer = new MutationObserver(function (mutations) {
         mutations.forEach(function (mutation) {
-            if (body.className == 'fp-scrollable fp-viewing-sec-four' || body.className == 'fp-viewing-sec-four') {
+            if (body.classList.contains('fp-viewing-sec-four')) {
                 setTimeout(() => {
                     counterAnima();
                 }, 1000);
@@ -107,14 +107,14 @@ if(window.innerWidth >= 1248) {
                 }, 900);
             }
 
-            if (body.className != 'fp-scrollable fp-viewing-sec-one' && body.className != 'fp-viewing-sec-one') {
+            if (body.classList.contains('fp-viewing-sec-one') == false) {
                 navbar.classList.add('active');
 
             } else {
                 navbar.classList.remove('active');
             }
 
-            if (body.className == 'fp-scrollable fp-viewing-sec-five' || body.className == 'fp-viewing-sec-five') {
+            if (body.classList.contains('fp-viewing-sec-five')) {
                 navbar.classList.add('disabled');
                 scroll_arrow.classList.add('disabled');
             } else {
@@ -129,6 +129,62 @@ if(window.innerWidth >= 1248) {
         attributes: true
     });
 
+})();
+
+(() => {
+    const target = document.querySelectorAll('[data-anima]');
+    const animationClass = 'animate';
+    const section = document.querySelectorAll('.section');
+    const body = document.querySelector('body');
+    const header = document.querySelector('header');
+
+    header.classList.add(animationClass)
+
+    let observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            section.forEach((el, i, arr) => {
+                
+                if(el.classList.contains('active')) {
+                    setTimeout(() => {
+                        el.classList.add(animationClass);
+                    }, 1000);
+                   
+                } else {
+                    el.classList.remove(animationClass);
+                }
+            });
+        
+
+        });
+    });
+
+    observer.observe(body, {
+        attributes: true
+    });
+
+    
+    /*
+    function animeScroll() {
+        const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+        target.forEach((el) => {
+            if((windowTop) > el.offsetTop) {
+                el.classList.add(animationClass);
+            } else {
+                el.classList.remove(animationClass);
+            }
+        });
+    } 
+
+    animeScroll();
+
+    if(target.length) {
+        window.addEventListener('scroll', () => {
+            animeScroll();
+            console.log('sdasd');
+        });
+    }
+    */
+    
 })();
  
 // SLICK CAROUSEL

@@ -1,18 +1,29 @@
-@keyframes conic {
-    0% {
-        background: conic-gradient(#D8385E 0%, transparent 0%);
-        transition: all 0.1s ease-out;
-    }
+[data-anima] {
+    opacity: 0;
+    transition: .5s;
+}
 
-    50% {
-        background: conic-gradient(#D8385E 50%, transparent 50%);
-        transition: all 0.1s ease-out;
-    }
+[data-anima="fade"] {
+    opacity: 0;
+}
 
-    100% {
-        background: conic-gradient(#D8385E 85%, transparent 85%);
-        transition: all 0.1s ease-out;
-    }
+[data-anima="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
 
-    
+[data-anima="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anima="up"] {
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anima="down"] {
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anima].animate, .animate [data-anima] {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
