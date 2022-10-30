@@ -81,6 +81,7 @@ if(window.innerWidth >= 1248) {
     const counters = document.querySelectorAll('.value');
     const navbar = document.querySelector('nav.navbar');
     const scroll_arrow = document.querySelector('.ico-scroll');
+    const scroll_icons = document.querySelector('.ico-lbm');
     
     function counterAnima() {
         const speed = 200;
@@ -129,9 +130,11 @@ if(window.innerWidth >= 1248) {
             if (body.classList.contains('fp-viewing-sec-five')) {
                 navbar.classList.add('disabled');
                 scroll_arrow.classList.add('disabled');
+                scroll_icons.classList.add('disabled');
             } else {
                 navbar.classList.remove('disabled');
                 scroll_arrow.classList.remove('disabled');
+                scroll_icons.classList.remove('disabled');
             }
 
         });
@@ -202,7 +205,7 @@ if(window.innerWidth >= 1248) {
 // SLICK CAROUSEL
 (() => {
 
-    if(window.innerWidth <= 1248) {
+    if(window.innerWidth <= 992) {
         $('.slider-for').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
