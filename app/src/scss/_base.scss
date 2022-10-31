@@ -44,6 +44,18 @@ html {
         padding: 0;
     }
 }
+
+.section {
+    padding: 71.59px 0 0;
+
+    @media (--tab) {
+        padding: 109px 0 0;
+    }
+
+    @media (min-width: 1360px) {
+        padding: 0;
+    }
+}
  
 a {
     text-decoration: none;

@@ -40,7 +40,7 @@ if(window.innerWidth >= 640 && window.innerWidth < 992) {
         scrollOverflow: true,
         scrollBar:false,
         anchors:['sec-one', 'sec-two', 'sec-three', 'sec-four', 'sec-five'],
-        paddingTop: '109px',
+        //paddingTop: '109px',
     });
 } else if (window.innerWidth >= 992) {
     new fullpage('#fullpage', {
@@ -64,7 +64,7 @@ if(window.innerWidth >= 640 && window.innerWidth < 992) {
         scrollBar:false,
         scrollOverflowMacStyle: true,
         anchors:['sec-one', 'sec-two', 'sec-three', 'sec-four', 'sec-five'],
-        paddingTop: '71.59px'
+        //paddingTop: '71.59px' 
     });
 }
  
@@ -101,7 +101,7 @@ if(window.innerWidth >= 640 && window.innerWidth < 992) {
             const value = +counter.getAttribute('data-counter');
             const data = +counter.innerText;
             const time = value / speed;
-
+ 
             if(data < value) {
                 counter.innerText = Math.ceil(data + time);
 
@@ -115,17 +115,55 @@ if(window.innerWidth >= 640 && window.innerWidth < 992) {
         });
     }
 
+    const bar01 = new ProgressBar.Circle('.circle-progress-01', {
+        strokeWidth: 6,
+        easing: 'easeInOut',
+        duration: 3000,
+        color: '#D8385E',
+        trailColor: '#B6B6B6',
+        trailWidth: 1,
+        svgStyle: null
+    });
+
+    const bar02 = new ProgressBar.Circle('.circle-progress-02', {
+        strokeWidth: 6,
+        easing: 'easeInOut',
+        duration: 3000,
+        color: '#FF4438',
+        trailColor: '#B6B6B6',
+        trailWidth: 1,
+        svgStyle: null
+    });
+
+    const bar03 = new ProgressBar.Circle('.circle-progress-03', {
+        strokeWidth: 6,
+        easing: 'easeInOut',
+        duration: 3000,
+        color: '#FFB0A7',
+        trailColor: '#B6B6B6',
+        trailWidth: 1,
+        svgStyle: null
+    });
+        
     let observer = new MutationObserver(function (mutations) {
         mutations.forEach(function (mutation) {
             if (body.classList.contains('fp-viewing-sec-four')) {
                 setTimeout(() => {
                     counterAnima();
+                    bar01.animate(0.85);
+                    bar02.animate(0.77);
+                    bar03.animate(0.83);
                 }, 1000);
+
+                
 
             } else {
                 setTimeout(() => {
                     counters.forEach((el) => {
                         el.innerText = '0';
+                        bar01.animate(0);
+                        bar02.animate(0);
+                        bar03.animate(0);
                     });
                 }, 900);
             }
@@ -211,7 +249,7 @@ if(window.innerWidth >= 640 && window.innerWidth < 992) {
     */
     
 })();
- 
+
 // SLICK CAROUSEL
 (() => {
 
