@@ -22,7 +22,7 @@ window.addEventListener('resize', function () {
         a.addEventListener('click', () => {
             setTimeout(() => {
                 menu.classList.remove('active');
-            }, 1000)
+            }, 500)
             
         });
     })
@@ -31,14 +31,25 @@ window.addEventListener('resize', function () {
 })();
 
 // START 'fullpage.js'
-if(window.innerWidth >= 1248) {
+if(window.innerWidth >= 640 && window.innerWidth < 992) {
+    new fullpage('#fullpage', {
+        licenseKey: '',
+        autoScrolling:true,
+        scrollHorizontally: true,
+        credits: { enabled: false },
+        scrollOverflow: true,
+        scrollBar:false,
+        anchors:['sec-one', 'sec-two', 'sec-three', 'sec-four', 'sec-five'],
+        paddingTop: '109px',
+    });
+} else if (window.innerWidth >= 992) {
     new fullpage('#fullpage', {
         licenseKey: '',
         autoScrolling:true,
         scrollHorizontally: true,
         credits: { enabled: false },
         scrollOverflow: false,
-        scrollBar:true,
+        scrollBar:false,
         anchors:['sec-one', 'sec-two', 'sec-three', 'sec-four', 'sec-five'],
         //paddingTop: '109px',
     });
@@ -50,7 +61,6 @@ if(window.innerWidth >= 1248) {
         scrollHorizontally: true,
         credits: { enabled: false },
         scrollOverflow: true,
-
         scrollBar:false,
         scrollOverflowMacStyle: true,
         anchors:['sec-one', 'sec-two', 'sec-three', 'sec-four', 'sec-five'],
@@ -205,7 +215,7 @@ if(window.innerWidth >= 1248) {
 // SLICK CAROUSEL
 (() => {
 
-    if(window.innerWidth <= 992) {
+    if(window.innerWidth <= 640) {
         $('.slider-for').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
