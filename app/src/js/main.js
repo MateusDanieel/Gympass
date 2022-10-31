@@ -154,9 +154,7 @@ if(window.innerWidth >= 640 && window.innerWidth < 992) {
                     bar02.animate(0.77);
                     bar03.animate(0.83);
                 }, 1000);
-
-                
-
+ 
             } else {
                 setTimeout(() => {
                     counters.forEach((el) => {
