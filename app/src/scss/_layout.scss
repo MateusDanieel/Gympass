@@ -597,6 +597,10 @@ section.sec-work-life {
             min-height: auto;
         }
 
+        @media (--desk) {
+            flex-wrap: nowrap;
+        }
+
         @media (--deskWide) {
             margin: 88px 0 0;
         }
@@ -825,6 +829,10 @@ section.sec-employees {
                 font-size: 80px;
             }
 
+            @media (--desk) {
+                margin: 0 0 15px;
+            }
+
             @media (--deskWide) {
                 margin: 0 0 65px;
                 font-size: 96px;
@@ -865,8 +873,12 @@ section.sec-employees {
                 margin: 37px 0 0;
             }
 
-            @media (--deskWide) {
+            @media (--desk) {
+                margin: 10px 0 0;
+            }
 
+            @media (--deskWide) {
+                margin: 37px 0 0;
             }
 
             li {
@@ -1181,7 +1193,8 @@ section.sec-looking {
                         justify-content: flex-start;
                         height: 335px;
                         width: 335px;
-                        background: #F5F5FA url('../../img/bg.png') center center repeat;
+                        //background: #F5F5FA url('../../img/bg.png') center center repeat;
+                        background: transparent;
                         background-size: contain;
                     }
 
@@ -1230,6 +1243,16 @@ section.sec-looking {
                         max-width: 235px;
                         margin: 0 auto;
                         text-align: center;
+                    }
+                }
+
+                .circle-progress {
+                    height: 158px;
+                    width: 158px;
+
+                    @media (--tabSm) {
+                        height: 365px;
+                        width: 365px;
                     }
                 }
 
@@ -1640,6 +1663,11 @@ footer.sec-footer {
             //min-height: 100vh;
 
             @media (--desk) {
+                width: 47.5%;
+            }
+
+            @media (min-width: 1360px) {
+                width: 100%;
                 max-width: 522px; 
                 min-height: auto;
             }
