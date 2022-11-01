@@ -450,11 +450,8 @@ section.sec-work-life {
             //margin: 60px 0 0;
         }
 
-        @media (--deskMini) {
-            font-size: 80px;
-        }
-
         @media (--desk) {
+            font-size: 80px;
             text-align: center;
         }
 
@@ -529,8 +526,9 @@ section.sec-work-life {
                 }
 
                 @media (--deskMini) {
-                    width: 136px;
-                    height: 136px;
+                    height:118px;
+                    width:118px;
+                    left: 25px;
                 }
 
                 @media (--desk) {
@@ -588,17 +586,18 @@ section.sec-work-life {
 
     .lst {
         display: flex;
-        flex-wrap: wrap;
+        /*flex-wrap: wrap;*/
         justify-content: space-between;
         margin: 50px 0 0;
 
         @media (--tabSm) {
-            margin: 50px 0 0;
+            //margin: 50px 0 0;
             min-height: auto;
+            margin: 4% 0 0;
         }
 
         @media (--desk) {
-            flex-wrap: nowrap;
+            //flex-wrap: nowrap;
         }
 
         @media (--deskWide) {
@@ -626,7 +625,7 @@ section.sec-work-life {
                     background-color: transparent;
                     border: none;
                     border-radius: 0;
-                    padding: 0;
+                    //padding: 0;
                     text-align: left;
                     margin: 0 0 29px;
                     height: auto;
@@ -760,11 +759,13 @@ section.sec-employees {
     .content {
         width: 100%;
         position: relative;
+        margin: 2% 0 0;
 
         @media (--tabSm) {
             border: 3px solid #231B22;
             border-radius: 116px;
             padding: 88px;
+            margin: 1% 0 0;
         }
 
         @media (--tabSm) {
@@ -775,6 +776,8 @@ section.sec-employees {
         @media (--deskWide) {
             padding: 88px;
             border-radius: 116px;
+            margin: 1% 0 0;
+
         }
 
         .copy {
@@ -818,7 +821,7 @@ section.sec-employees {
             color: #231B22;
 
             @media (--tabSm) {
-                font-size: 60px;
+                font-size: 40px;
                 text-align: center;
                 line-height: .95;
                 margin: 0 0 33px;
@@ -826,7 +829,7 @@ section.sec-employees {
 
             @media (--deskMini) {
                 margin: 0 0 33px;
-                font-size: 80px;
+                font-size: 45px;
             }
 
             @media (--desk) {
@@ -914,14 +917,14 @@ section.sec-employees {
                     margin: 0 24px 0 0;
 
                     @media (--tabSm) {
-                        font-size: 80px;
+                        font-size: 60px;
                         width: auto;
                         text-align: center;
                         margin: 0;
                     }
 
                     @media (--deskMini) {
-                        font-size: 100px;
+                        font-size: 80px;
                     }
                 }
 
@@ -1012,11 +1015,19 @@ section.sec-looking {
                 color: #231B22;
 
                 @media (--tabSm) {
-                    font-size: 80px;
+                    font-size: 45px;
+                    margin: 5% 0 0;
                 }
 
                 @media (--desk) {
-                    max-width: 522px;
+                    max-width: 660px;
+                    font-size: 50px;
+                    margin: 3% 0 0;
+                }
+
+                @media (--deskWide) {
+                    font-size: 80px;
+                    margin: 1% 0 0;
                 }
             }
 
@@ -1091,7 +1102,7 @@ section.sec-looking {
 
         @media (--tabSm) {
             margin: 10px 0 0;
-            flex-wrap: wrap;
+            //flex-wrap: wrap;
             justify-content: space-evenly;
         }
 
@@ -1251,8 +1262,8 @@ section.sec-looking {
                     width: 158px;
 
                     @media (--tabSm) {
-                        height: 365px;
-                        width: 365px;
+                        height: 340px;
+                        width: 340px;
                     }
                 }
 
