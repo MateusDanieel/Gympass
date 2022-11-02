@@ -92,6 +92,7 @@ if(window.innerWidth >= 640 && window.innerWidth < 992) {
     const navbar = document.querySelector('nav.navbar');
     const scroll_arrow = document.querySelector('.ico-scroll');
     const scroll_icons = document.querySelector('.ico-lbm');
+    const float_bt = document.querySelector('.float-bt');
     
     function counterAnima() {
         const speed = 200;
@@ -168,15 +169,18 @@ if(window.innerWidth >= 640 && window.innerWidth < 992) {
 
             if (body.classList.contains('fp-viewing-sec-one') == false) {
                 navbar.classList.add('active');
+                float_bt.classList.remove('disabled');
 
             } else {
                 navbar.classList.remove('active');
+                float_bt.classList.add('disabled');
             }
 
             if (body.classList.contains('fp-viewing-sec-five')) {
                 navbar.classList.add('disabled');
                 scroll_arrow.classList.add('disabled');
                 scroll_icons.classList.add('disabled');
+                float_bt.classList.add('disabled');
             } else {
                 navbar.classList.remove('disabled');
                 scroll_arrow.classList.remove('disabled');
