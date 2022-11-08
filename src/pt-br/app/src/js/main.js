@@ -1,8 +1,14 @@
 window.addEventListener('resize', function () { 
     "use strict";
-    window.location.reload(); 
-});
 
+    const body = document.querySelector('body');
+
+    if (body.classList.contains('fp-viewing-sec-five') !== true) {
+        window.location.reload(); 
+    }
+    
+});
+ 
 // NAVBAR MENU TOGGLE 
 (() => {
     let bt_open = document.querySelector('nav.navbar .bt-open');
@@ -31,7 +37,7 @@ window.addEventListener('resize', function () {
 })();
 
 // START 'fullpage.js'
-if(window.innerWidth >= 640 && window.innerWidth < 992) {
+if(window.innerWidth >= 640 && window.innerWidth < 1248) {
     new fullpage('#fullpage', {
         licenseKey: '',
         autoScrolling:true,
@@ -42,7 +48,7 @@ if(window.innerWidth >= 640 && window.innerWidth < 992) {
         anchors:['sec-one', 'sec-two', 'sec-three', 'sec-four', 'sec-five'],
         //paddingTop: '109px',
     });
-} else if (window.innerWidth >= 992) {
+} else if (window.innerWidth >= 1248) {
     new fullpage('#fullpage', {
         licenseKey: '',
         autoScrolling:true,
