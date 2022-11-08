@@ -8,7 +8,7 @@ window.addEventListener('resize', function () {
     }
     
 });
-
+ 
 // NAVBAR MENU TOGGLE 
 (() => {
     let bt_open = document.querySelector('nav.navbar .bt-open');
